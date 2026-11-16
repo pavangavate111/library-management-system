@@ -1,0 +1,129 @@
+
+/* Main Borrowing History Page */
+
+.borrowing-history {
+    min-height: 85vh;
+    padding: 30px;
+    background: #f8fafc;
+}
+
+.borrowing-history h1 {
+    margin-bottom: 25px;
+    color: #1e293b;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Search Section */
+
+.history-search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.history-search input {
+    padding: 12px 14px;
+    width: 280px;
+    max-width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.history-search input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.10);
+}
+
+.history-search button {
+    padding: 12px 22px;
+    background: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.history-search button:hover {
+    background: #4338ca;
+}
+
+/* History Table */
+
+.borrowing-history table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.borrowing-history th,
+.borrowing-history td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    font-size: 14px;
+}
+
+.borrowing-history th {
+    background: #1e293b;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.borrowing-history td {
+    color: #334155;
+}
+
+.borrowing-history tbody tr:hover {
+    background: #f1f5f9;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .borrowing-history {
+        padding: 20px 15px;
+        overflow-x: auto;
+    }
+
+    .borrowing-history table {
+        min-width: 850px;
+    }
+
+    .history-search {
+        flex-direction: column;
+    }
+
+    .history-search input {
+        width: 100%;
+    }
+
+    .history-search button {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .borrowing-history h1 {
+        font-size: 24px;
+    }
+
+}

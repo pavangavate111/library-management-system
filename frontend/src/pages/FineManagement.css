@@ -1,0 +1,144 @@
+
+/* Main Fine Management Page */
+
+.fine-management {
+    min-height: 85vh;
+    padding: 30px;
+    background: #f8fafc;
+}
+
+.fine-management h1 {
+    margin-bottom: 28px;
+    color: #1e293b;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Total Fine Card */
+
+.fine-card {
+    background: #ffffff;
+    padding: 28px;
+    margin-bottom: 28px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fine-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.fine-card h2 {
+    color: #475569;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.fine-card p {
+    font-size: 34px;
+    font-weight: 700;
+    color: #4f46e5;
+    margin-top: 10px;
+}
+
+/* Fine Sections */
+
+.fine-section {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 22px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.fine-section h2 {
+    color: #334155;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+/* Input Fields */
+
+.fine-section input {
+    padding: 12px 14px;
+    margin: 5px 10px 10px 0;
+    width: 250px;
+    max-width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.fine-section input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.10);
+}
+
+/* Buttons */
+
+.fine-section button {
+    padding: 12px 20px;
+    background: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.fine-section button:hover {
+    background: #4338ca;
+}
+
+/* Result Messages */
+
+.fine-section p {
+    margin-top: 16px;
+    color: #334155;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .fine-management {
+        padding: 20px 15px;
+    }
+
+    .fine-section {
+        padding: 20px;
+    }
+
+    .fine-section input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .fine-section button {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .fine-management h1 {
+        font-size: 24px;
+    }
+
+    .fine-card p {
+        font-size: 28px;
+    }
+
+}

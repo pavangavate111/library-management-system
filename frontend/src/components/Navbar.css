@@ -1,0 +1,145 @@
+
+/* Main Navigation Bar */
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 16px 30px;
+    background: #1e293b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Navigation Links */
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 9px 12px;
+    border-radius: 7px;
+    transition: all 0.2s ease;
+}
+
+/* Hover Effect */
+
+nav a:hover {
+    color: #ffffff;
+    background: #334155;
+}
+
+/* Active Link */
+
+nav a.active {
+    color: #ffffff;
+    background: #4f46e5;
+    font-weight: 600;
+}
+
+/* User Information Container */
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    padding: 0 5px;
+}
+
+/* Welcome Message */
+
+.welcome-text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Role Badge */
+
+.role-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* ADMIN Role */
+
+.role-badge.admin {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* USER Role */
+
+.role-badge.user {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+/* Logout Button */
+
+nav button {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #ef4444;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+nav button:hover {
+    background: #dc2626;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    nav {
+        gap: 10px;
+        padding: 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .navbar-user {
+        margin-left: 0;
+        width: 100%;
+        padding: 8px 5px;
+    }
+
+    .welcome-text {
+        font-size: 13px;
+    }
+
+    nav button {
+        padding: 8px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    nav {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .role-badge {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+}

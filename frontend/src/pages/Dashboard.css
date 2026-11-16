@@ -1,0 +1,121 @@
+
+/* Dashboard Main Container */
+
+.dashboard {
+    min-height: 85vh;
+    padding: 35px;
+    background: #f8fafc;
+}
+
+/* Dashboard Heading */
+
+.dashboard h1 {
+    margin-bottom: 10px;
+    color: #1e293b;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.dashboard > p {
+    margin-bottom: 25px;
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* Statistics Grid */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+/* Dashboard Cards */
+
+.dashboard-card {
+    position: relative;
+    overflow: hidden;
+    padding: 28px 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Heading */
+
+.dashboard-card h3 {
+    margin: 0 0 18px;
+    color: #64748b;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Card Value */
+
+.dashboard-card p {
+    margin: 0;
+    color: #4f46e5;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+/* Loading and Error Messages */
+
+.dashboard .loading,
+.dashboard .error {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.dashboard .loading {
+    color: #475569;
+    background: #e2e8f0;
+}
+
+.dashboard .error {
+    color: #b91c1c;
+    background: #fee2e2;
+}
+
+/* Tablet Responsive */
+
+@media (max-width: 900px) {
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    .dashboard {
+        padding: 22px 15px;
+    }
+
+    .dashboard h1 {
+        font-size: 25px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .dashboard-card {
+        padding: 23px;
+    }
+
+}
