@@ -1,169 +1,277 @@
 # Library Management System
 
-A full-stack Library Management System developed using **Java 21, Spring Boot, React, and MySQL**. This application helps manage books, library members, borrowing transactions, returns, and fines through a secure web-based interface.
+<p align="center">
+  A Full-Stack Web Application built with Java, Spring Boot, React and MySQL.
+</p>
 
-## Project Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-21-orange" />
+  <img src="https://img.shields.io/badge/Spring%20Boot-Backend-brightgreen" />
+  <img src="https://img.shields.io/badge/React-Frontend-blue" />
+  <img src="https://img.shields.io/badge/MySQL-Database-blue" />
+  <img src="https://img.shields.io/badge/Authentication-JWT-orange" />
+</p>
 
-The Library Management System simplifies daily library operations. Administrators can manage books and members, while authenticated users can access library features according to their assigned roles.
+## Overview
+
+The **Library Management System** is a full-stack web application developed to simplify and manage library operations.
+
+It provides functionality for managing books, members, borrowing transactions, returns, overdue books and fines through a user-friendly interface.
+
+The application uses Spring Boot to build secure REST APIs, React for the frontend and MySQL for database management. It also implements JWT authentication and role-based authorization for Admin and User accounts.
+
+## Application Screenshots
+
+### Admin Dashboard
+
+![Admin Dashboard](screenshots/admin.png)
+
+### User Login
+
+![Login Page](screenshots/login.png)
+
+### User Registration
+
+![Registration Page](screenshots/register.png)
+
+### Book Management
+
+![Book Management](screenshots/books.png)
+
+### Member Management
+
+![Member Management](screenshots/members.png)
+
+### User Records
+
+![User Records](screenshots/users.png)
+
+### Active Borrowings
+
+![Active Borrowings](screenshots/borrowings.png)
+
+### Borrowing History
+
+![Borrowing History](screenshots/borrowing_history.png)
+
+### Fine Management
+
+![Fine Management](screenshots/fine_management.png)
+
+### Database - Books
+
+![Books Database](screenshots/db_books.png)
+
+### Database - Borrowings
+
+![Borrowings Database](screenshots/db_borrowings.png)
 
 ## Key Features
 
 ### 1. Authentication and Security
-- User registration and login
-- JWT-based authentication
-- Spring Security integration
-- Role-based authorization (ADMIN and USER)
-- Password encryption using BCrypt
-- Forgot password functionality
-- Email-based password reset using Gmail SMTP
+
+- User registration and login.
+- JWT-based authentication.
+- Spring Security integration.
+- Role-based authorization (ADMIN and USER).
+- Password encryption using BCrypt.
+- Forgot password functionality.
+- Email-based password reset using Gmail SMTP.
+- Protected REST API endpoints.
 
 ### 2. Book Management
-- Add, view, update, and delete books
-- Search books
-- View available books
-- Pagination and sorting
-- Book category statistics
-- Protection against deleting books with borrowing history
+
+- Add new books.
+- View all books.
+- Update book information.
+- Delete books.
+- Search books.
+- View available books.
+- Pagination and sorting.
+- Book category statistics.
+- Prevent deletion of books with existing borrowing history.
 
 ### 3. Member Management
-- Add, view, update, and delete members
-- Search and manage member records
-- Protection against deleting members with borrowing history
+
+- Add new members.
+- View member details.
+- Update member information.
+- Delete members.
+- Search and manage member records.
+- Prevent deletion of members with existing borrowing history.
 
 ### 4. Borrowing Management
-- Issue books to members
-- Return borrowed books
-- View active borrowings
-- View borrowing history
-- Track borrowing dates and due dates
-- Detect overdue books
-- Calculate fines
 
-### 5. Additional Features
-- Dashboard and library statistics
-- RESTful API development
-- Swagger API documentation
-- Centralized exception handling
-- Input validation
-- Scheduled overdue-book processing
+- Issue books to members.
+- Return borrowed books.
+- View active borrowings.
+- View borrowing history.
+- Track borrowing dates and due dates.
+- Identify overdue books.
+- Calculate fines.
+- Maintain borrowing records.
+
+### 5. Fine Management
+
+- Track overdue books.
+- Calculate applicable fines.
+- View fine information.
+
+### 6. Additional Features
+
+- Dashboard and library statistics.
+- RESTful API development.
+- Swagger API documentation.
+- Centralized exception handling.
+- Input validation.
+- Scheduled overdue-book processing.
 
 ## Technology Stack
 
-### Backend
-- Java 21
-- Spring Boot
-- Spring MVC
-- Spring Security
-- Spring Data JPA
-- Hibernate ORM
-- REST APIs
-- JWT (JSON Web Token)
-- BCrypt Password Encoder
-- Jakarta Bean Validation
-- Maven
+### Backend Technologies
 
-### Frontend
-- React
-- JavaScript
-- HTML5
-- CSS3
-- Axios
-- React Router DOM
-- Vite
+| Technology | Purpose |
+|---|---|
+| Java 21 | Core programming language |
+| Spring Boot | Backend application development |
+| Spring MVC | REST API development |
+| Spring Security | Application security |
+| Spring Data JPA | Database operations |
+| Hibernate ORM | Object-relational mapping |
+| JWT | Authentication |
+| BCrypt | Password encryption |
+| Jakarta Bean Validation | Input validation |
+| Maven | Dependency and build management |
+
+### Frontend Technologies
+
+| Technology | Purpose |
+|---|---|
+| React | User interface development |
+| JavaScript | Frontend programming |
+| HTML5 | Page structure |
+| CSS3 | Styling |
+| Axios | HTTP communication |
+| React Router DOM | Frontend routing |
+| Vite | Frontend development and build tool |
 
 ### Database
+
 - MySQL
 
 ### Email Integration
+
 - JavaMailSender
 - Gmail SMTP
 - Email-based password reset
 
 ### Development and Testing Tools
+
 - IntelliJ IDEA
-- Git and GitHub
+- Git
+- GitHub
 - Postman
 - Swagger UI
 - Maven
 - npm
 
-## Project Architecture
+## Application Architecture
 
 The application follows a layered backend architecture with a separate React frontend.
 
 ```text
-Library-Management-System/
-│
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/library/lms/
-│       │       ├── config/
-│       │       ├── controller/
-│       │       ├── dto/
-│       │       ├── entity/
-│       │       ├── exception/
-│       │       ├── mapper/
-│       │       ├── repository/
-│       │       ├── security/
-│       │       └── service/
-│       │
-│       └── resources/
-│           └── application.properties
-│
-├── frontend/
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── pages/
-│   │   └── services/
-│   └── package.json
-│
-├── pom.xml
-├── mvnw
-├── mvnw.cmd
-└── README.md
+                 React Frontend
+                       |
+                       |
+                Axios HTTP Requests
+                       |
+                       v
+             Spring Boot REST APIs
+                       |
+                       v
+                 Controller Layer
+                       |
+                       v
+                  Service Layer
+                       |
+                       v
+                Repository Layer
+                       |
+                       v
+                 MySQL Database
 ```
 
-## Application Architecture Flow
+Spring Security and JWT are used to protect backend API endpoints.
+
+## Backend Project Structure
 
 ```text
-React Frontend
-      |
-      | Axios HTTP Requests
-      v
-Spring Boot REST Controllers
-      |
-      v
-Service Layer
-      |
-      v
-Repository Layer
-      |
-      v
-MySQL Database
+src/main/java/com/library/lms/
+│
+├── config/
+│   ├── OpenApiConfig.java
+│   ├── OverdueScheduler.java
+│   ├── PasswordConfig.java
+│   └── SecurityConfig.java
+│
+├── controller/
+│   ├── AuthController.java
+│   ├── BookController.java
+│   ├── BorrowingController.java
+│   └── MemberController.java
+│
+├── dto/
+├── entity/
+├── exception/
+├── mapper/
+├── repository/
+├── security/
+│
+└── service/
+    └── impl/
 ```
 
-Spring Security and JWT are used to secure backend API endpoints.
+## Frontend Project Structure
 
-## Database
+```text
+frontend/src/
+│
+├── assets/
+├── components/
+├── context/
+├── pages/
+│
+├── services/
+│   ├── api.js
+│   ├── authService.js
+│   ├── bookService.js
+│   ├── borrowingService.js
+│   └── memberService.js
+│
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+```
+
+## Database Design
 
 **Database Name:** `library_management_db`
 
-Main database entities:
+The main entities used in the application are:
+
 - User
 - Book
 - Member
 - Borrowing
 
-JPA and Hibernate are used for database persistence and entity relationships.
+Spring Data JPA and Hibernate are used for database persistence and entity relationships.
 
 ## Installation and Setup
 
 ### Prerequisites
 
-Install the following:
+Install the following software:
 
 - JDK 21
 - Node.js and npm
@@ -174,40 +282,42 @@ Install the following:
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/pavangavate111/library-management-system.git
 cd library-management-system
 ```
 
-### 2. Configure MySQL
+### 2. Configure MySQL Database
 
-Create the database:
+Create the database in MySQL:
 
 ```sql
 CREATE DATABASE library_management_db;
 ```
 
-Configure your MySQL connection in:
+Configure the database connection in:
 
 `src/main/resources/application.properties`
 
-Set your database username and password.
+Set your own MySQL username and password.
 
-Configure the following environment variables for Gmail SMTP:
+### 3. Configure Email Properties
+
+For the password reset functionality, configure the following environment variables:
 
 ```text
 MAIL_USERNAME
 MAIL_PASSWORD
 ```
 
-Also configure the frontend URL used for password-reset links.
+Also configure the frontend URL used to generate password-reset links.
 
-**Important:** Never commit database passwords, Gmail App Passwords, JWT secrets, or other sensitive credentials to GitHub.
+**Security Note:** Never upload database passwords, Gmail App Passwords, JWT secrets or other sensitive credentials to GitHub.
 
-### 3. Run the Spring Boot Backend
+### 4. Run the Spring Boot Backend
 
-From the project root directory, open a terminal and run:
+Open a terminal in the main project directory.
 
-**Windows:**
+For Windows:
 
 ```powershell
 .\mvnw.cmd spring-boot:run
@@ -215,9 +325,9 @@ From the project root directory, open a terminal and run:
 
 Backend URL:
 
-`http://localhost:8080`
+http://localhost:8080
 
-### 4. Run the React Frontend
+### 5. Run the React Frontend
 
 Open another terminal:
 
@@ -231,38 +341,42 @@ Open the local URL displayed by Vite in your browser.
 
 ## API Documentation
 
-Swagger UI:
+The project uses Swagger UI for API documentation and testing.
 
-`http://localhost:8080/swagger-ui/index.html`
+Swagger URL:
 
-Use Swagger UI or Postman to explore and test REST API endpoints.
+http://localhost:8080/swagger-ui/index.html
 
-## Testing and Verification
+You can also test REST API endpoints using Postman.
+
+## Testing and Build Verification
 
 The application was manually tested to verify its major functionalities.
 
 Testing included:
 
-- User registration and login
-- JWT authentication
-- Admin and User access
-- Book CRUD operations
-- Member CRUD operations
-- Book issue and return
-- Borrowing history
-- Fine management
-- Forgot password and password reset
-- REST API testing using Postman and Swagger UI
+- User registration and login.
+- JWT authentication.
+- Admin and User access.
+- Book CRUD operations.
+- Member CRUD operations.
+- Book issue and return.
+- Borrowing history.
+- Fine management.
+- Forgot password and password reset.
+- REST API testing using Postman and Swagger UI.
 
-### Build Verification
+### Backend Build Verification
 
-**Backend:**
+Command:
 
 ```powershell
 .\mvnw.cmd clean package -DskipTests
 ```
 
-**Frontend:**
+### Frontend Build Verification
+
+Command:
 
 ```bash
 npm run build
@@ -272,20 +386,24 @@ Both backend packaging and frontend production builds completed successfully.
 
 ## Future Improvements
 
-- Cloud deployment
-- Automated test coverage
-- Additional reporting and analytics
+- Cloud deployment.
+- Automated test coverage.
+- Additional reporting and analytics.
 
 ## Developer
 
 **Pavan Gavate**
 
-- GitHub: https://github.com/pavangavate111
-- LinkedIn: https://linkedin.com/in/pavan-a-gavate
-- LeetCode: https://leetcode.com/u/pavanleetcode111
+Java Backend Developer | Full-Stack Developer
 
-**Project Name:** Library Management System  
-**Project Type:** Full-Stack Web Application  
-**Backend:** Java and Spring Boot  
-**Frontend:** React  
-**Database:** MySQL
+- GitHub: [github.com/pavangavate111](https://github.com/pavangavate111)
+- LinkedIn: [linkedin.com/in/pavan-a-gavate](https://linkedin.com/in/pavan-a-gavate)
+- LeetCode: [leetcode.com/u/pavanleetcode111](https://leetcode.com/u/pavanleetcode111)
+
+---
+
+<p align="center">
+  <b>Library Management System</b><br/>
+  Full-Stack Web Application<br/>
+  Java 21 | Spring Boot | React | MySQL
+</p>
